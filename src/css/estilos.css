@@ -1,0 +1,376 @@
+html {
+	color: #fff;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	margin: 0 auto;
+	max-width: 1120px;
+	background-image: linear-gradient(109.6deg, rgb(0, 0, 0) 41.2%, rgb(49, 55, 56) 81.1%);
+	color: #ffffff;
+	background-size: 120% 120%;
+}
+
+#particles-js {
+	position: absolute;
+	top: 150px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+
+.cabecalho {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 15px;
+	border-bottom: 1px solid #435ed8;
+}
+
+.cabecalho .logo {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	border: 2px solid #fffdfd;
+	text-decoration: underline;
+	text-align: center;
+	line-height: 55px;
+	font-family: "Raleway", sans-serif;
+	transition: 0.2s;
+}
+
+.cabecalho a:hover .logo {
+	color: #435ed8;
+	border: 2px solid #435ed8;
+}
+
+.cabecalho .menu li {
+	display: inline-block;
+	/* ou display: inline; */
+}
+
+.cabecalho .menu li a {
+	color: #fff;
+	font-size: 20px;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	transition: 0.2s;
+}
+
+.btn {
+	font-size: 17px;
+	background: transparent;
+	border: none;
+	padding: 1em 1.5em;
+	color: #ffedd3;
+	text-transform: uppercase;
+	position: relative;
+	transition: 0.5s ease;
+	cursor: pointer;
+}
+
+.btn::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 0;
+	background-color: #435ed8;
+	transition: 0.5s ease;
+}
+
+.btn:hover {
+	color: #ffffff;
+	transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+	width: 100%;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 0;
+	width: 100%;
+	background-color: #435ed8;
+	transition: 0.4s ease;
+	z-index: -1;
+}
+
+.btn:hover::after {
+	height: 100%;
+	transition-delay: 0.4s;
+	color: rgb(252, 253, 255);
+}
+
+.home {
+	font-size: 20px;
+	display: flex;
+	min-height: calc(100vh - 125px);
+	align-items: center;
+	gap: 50px;
+	justify-content: space-between;
+	border-bottom: 1px solid #435ed8;
+	margin-top: 20px;
+}
+
+.home .informacoes {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	letter-spacing: 2px;
+	padding: 0 15px;
+	max-width: 50%;
+}
+
+.home .informacoes h1 {
+	font-family: "Raleway", sans-serif;
+	font-size: 45px;
+	margin-bottom: 20px;
+}
+
+.home .informacoes p {
+	font-family: "Raleway", sans-serif;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.home .redes-sociais {
+	display: flex;
+	gap: 20px;
+}
+
+.home .informacoes span {
+	color: #435ed8;
+	font-family: "Raleway", sans-serif;
+}
+
+.home .redes-sociais a i {
+	border: 1px solid #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	font-size: 26px;
+	transition: 0.3s;
+	margin-bottom: 20px;
+}
+
+.home .redes-sociais a i:hover {
+	color: #435ed8;
+	border: 1px solid #435ed8;
+	transform: scale(1.1);
+}
+
+.home .container-foto .foto {
+	max-width: 450px;
+	border-radius: 50%;
+}
+
+.home .container-foto img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.home .foto.sombra-interna {
+	background-size: 180% 180%;
+	animation: gradient-animation 5s ease infinite;
+}
+
+.skills {
+	font-size: 20px;
+	display: flex;
+	min-height: calc(100vh - 125px);
+	align-items: center;
+	gap: 50px;
+	justify-content: space-between;
+	border-bottom: 1px solid #435ed8;
+	text-align: left;
+}
+
+.skills .informacoes h2 {
+	font-family: "Raleway", sans-serif;
+	font-size: 45px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skills .informacoes p {
+	font-family: "Raleway", sans-serif;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.skills .informacoes span {
+	color: #435ed8;
+}
+
+.skills .informacoes h3 {
+	font-family: "Raleway", sans-serif;
+	font-size: 35px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.skills .info .lin img {
+	width: 130px;
+	height: 100px;
+	color: #fff;
+	text-transform: capitalize;
+	margin-left: 20px;
+	padding: 10px 20px;
+	transition: 0.2s;
+}
+
+.skills .info .lin img:hover {
+	transform: scale(1.2);
+}
+
+.projetos {
+	padding: 70px 0 70px;
+	border-bottom: 1px solid #435ed8;
+}
+
+.projetos .titulo span {
+	color: #435ed8;
+}
+
+.projetos .titulo {
+	text-align: center;
+	padding: 60px 0;
+	font-size: 45px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.projetos .container-projetos {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+
+.projetos .projeto {
+	max-width: 260px;
+	max-height: 500px;
+	position: relative;
+	display: none;
+}
+
+.projetos .projeto.ativo {
+	display: block;
+}
+
+.projetos .projeto img {
+	height: 100%;
+}
+
+.projetos .projeto h3 {
+	background-color: #040203;
+	width: 100%;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	position: absolute;
+	bottom: 0;
+}
+
+
+.projetos .projeto .informacoes-projeto {
+	background-color: #040203;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: 600;
+	opacity: 0;
+	transition: 0.3s;
+	padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+	opacity: 0.7;
+	background-color: #000;
+}
+
+.projetos .btn-mostrar-projetos {
+	background: none;
+	border: 1px solid #fff;
+	border-radius: 30px;
+	color: #fff;
+	width: 180px;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+	background-color: #435ed8;
+	transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+	display: none;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.MAIS {
+	background: #282936;
+	padding: 10px 2rem;
+	outline: 2.5px solid #2503ab;
+	margin-left: 500px;
+	outline-offset: 3px;
+	border: 0;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1rem;
+	border-radius: 150rem;
+	transition: 0.4s;
+	font-weight: 600;
+}
+
+.MAIS:hover {
+	outline-offset: 4.5px;
+	background: #062ca8;
+	font-size: 1.1rem;
+}
+.fade-in {
+	opacity: 0;
+	transition: opacity 4s ease;
+  }
+  
+  .aparecer {
+	opacity: 1;
+  }
