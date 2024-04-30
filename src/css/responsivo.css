@@ -1,5 +1,5 @@
 @media(max-width: 1280px) {
-    
+
     .cabecalho {
         padding: 30px;
     }
@@ -16,7 +16,8 @@
         text-align: center;
         align-items: center;
     }
-    .skills{
+
+    .skills {
         font-size: 18px;
         text-align: center;
     }
@@ -24,16 +25,32 @@
     .projetos .container-projetos {
         padding: 0 30px;
     }
+
     .cabecalho {
         justify-content: center;
         flex-direction: column;
         padding: 50px 0;
         gap: 15px;
-      }
-    
-      .cabecalho .menu li a {
+    }
+
+    .cabecalho .menu li a {
         padding: 15px;
-      }
+    }
+
+    div.item {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: coral;
+        --r: calc(var(--position) - var(--offset));
+        --abs: max(calc(var(--r) * -1), var(--r));
+        transition: all 0.25s linear;
+        transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+        z-index: calc((var(--position) - var(--abs)));
+        margin-right: 0px;
+        border: 4px solid black;
+    }
+
 }
 
 @media(max-width: 425px) {

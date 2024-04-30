@@ -54,3 +54,22 @@ function mostrarElementosAoRolar() {
   mostrarElementosAoRolar();
   
   window.addEventListener('scroll', mostrarElementosAoRolar);
+
+   // Função para avançar o carrossel
+   function nextSlide() {
+    const radios = document.querySelectorAll('input[name="position"]');
+    let checkedIndex;
+    radios.forEach((radio, index) => {
+      if (radio.checked) {
+        checkedIndex = index;
+        radio.checked = false;
+      }
+    });
+    const nextIndex = (checkedIndex + 1) % radios.length;
+    radios[nextIndex].checked = true;
+  }
+
+  // Avança o carrossel a cada 10 segundos
+  setInterval(nextSlide, 10000);
+  
+  
